@@ -7,11 +7,11 @@ function Header() {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: '1rem',
-      backgroundColor: '#282c34',
+      padding: '5rem',
+      backgroundColor: 'blacK',
       color: 'white',
     }}>
-      <h1>DEV RAJ</h1>
+      <h1>Hello Janta</h1>
       <nav>
         <a href="#about" style={{ margin: '0 1rem', color: 'white', textDecoration: 'none' }}>About</a>
         <a href="#projects" style={{ margin: '0 1rem', color: 'white', textDecoration: 'none' }}>Projects</a>
