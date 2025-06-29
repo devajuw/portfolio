@@ -8,14 +8,14 @@ function Header() {
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: '5rem',
-      backgroundColor: 'blacK',
+      backgroundColor: 'orange',
       color: 'white',
     }}>
-      <h1>Hello Janta</h1>
+      <h1 style={{ 'color':'black'}} >Hello, I am Dev</h1>
       <nav>
-        <a href="#about" style={{ margin: '0 1rem', color: 'white', textDecoration: 'none' }}>About</a>
-        <a href="#projects" style={{ margin: '0 1rem', color: 'white', textDecoration: 'none' }}>Projects</a>
-        <a href="#contact" style={{ margin: '0 1rem', color: 'white', textDecoration: 'none' }}>Contact</a>
+        <a href="#about" style={{ margin: '0 1rem', color: 'black', textDecoration: 'none' }}>About</a>
+        <a href="#projects" style={{ margin: '0 1rem', color: 'black', textDecoration: 'none' }}>Projects</a>
+        <a href="#contact" style={{ margin: '0 1rem', color: 'black', textDecoration: 'none' }}>Contact</a>
       </nav>
     </header>
   );
