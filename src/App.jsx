@@ -6,7 +6,7 @@ function App() {
     <div className={styles.App}>
       <Header />
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60vh",fontSize: "6rem", color: "white" }}>
-        <p>Kaam abhi baaki hai mere dost...</p>
+        <p>Built in progress...</p>
       </div>
     </div>
   );

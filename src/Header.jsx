@@ -8,7 +8,7 @@ function Header() {
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: '5rem',
-      backgroundColor: 'orange',
+      // backgroundColor: 'orange',
       color: 'white',
     }}>
       <h1 style={{ 'color':'black'}} >Hello, I am Dev</h1>

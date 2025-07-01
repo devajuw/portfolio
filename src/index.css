@@ -1,4 +1,4 @@
-*{
+/* *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,4 +13,24 @@ body {
     #6d5085 40%,
     #615b6e 100%
   );
+} */
+
+body {
+  background-color: #f9f9f7;
+   background-image: url('../paperBG.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: 'Georgia', serif;
+}
+
+main {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 2px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+}
+p{
+  color: black;
 }
