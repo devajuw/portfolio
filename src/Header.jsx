@@ -3,21 +3,36 @@ import React from 'react';
 
 function Header() {
   return (
-    <header style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '5rem',
-      // backgroundColor: 'orange',
-      color: 'white',
-    }}>
-      <h1 style={{ 'color':'black'}} >Hello, I am Dev</h1>
-      <nav>
-        <a href="#about" style={{ margin: '0 1rem', color: 'black', textDecoration: 'none' }}>About</a>
-        <a href="#projects" style={{ margin: '0 1rem', color: 'black', textDecoration: 'none' }}>Projects</a>
-        <a href="#contact" style={{ margin: '0 1rem', color: 'black', textDecoration: 'none' }}>Contact</a>
-      </nav>
-    </header>
+    <>
+      <style>
+        {`
+          .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5rem;
+            color: white;
+          }
+          .header-title {
+            color: black;
+            font-size: 40px;
+          }
+          .header-link {
+            margin: 0 1rem;
+            color: black;
+            text-decoration: none;
+          }
+        `}
+      </style>
+      <header className="header-container">
+        <p className="header-title"><b>Hello,</b> I am Dev</p>
+        <nav>
+          <a href="#about" className="header-link">About</a>
+          <a href="#projects" className="header-link">Projects</a>
+          <a href="#contact" className="header-link">Contact</a>
+        </nav>
+      </header>
+    </>
   );
 }
 

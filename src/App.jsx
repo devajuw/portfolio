@@ -1,12 +1,14 @@
-import styles from "./App.module.css";
+import "./css/index.css"; 
 import Header from "./Header";
+import LeetCodeStats from "./progress";
+
 
 function App() {
   return (
-    <div className={styles.App}>
-      <Header />
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60vh",fontSize: "6rem", color: "white" }}>
-        <p>Built in progress...</p>
+    <div className="App">
+      <Header /> 
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40vh", fontSize: "2rem" }}>
+        <p>...</p>
       </div>
     </div>
   );

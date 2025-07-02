@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "https://leetcode-api-pied.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  
   "dependencies": {
     "@fontsource/outfit": "^5.2.6",
     "@fontsource/roboto": "^5.2.6",

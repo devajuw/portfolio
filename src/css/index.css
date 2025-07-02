@@ -1,0 +1,53 @@
+body {
+  background-color: #f9f9f7;
+  background-image: url('../paperBG.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+
+}
+
+.header-container {
+  padding: 2rem;
+}
+
+.header-title {
+  font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .header-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .header-title {
+    font-size: 1.2rem;
+  }
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+p {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
