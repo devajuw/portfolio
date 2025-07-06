@@ -1,37 +1,33 @@
 // Header.jsx
 import React from 'react';
+import './css/index.css'; 
 
 function Header() {
   return (
     <>
-      <style>
-        {`
-          .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5rem;
-            color: white;
-          }
-          .header-title {
-            color: black;
-            font-size: 40px;
-          }
-          .header-link {
-            margin: 0 1rem;
-            color: black;
-            text-decoration: none;
-          }
-        `}
-      </style>
       <header className="header-container">
-        <p className="header-title"><b>Hello,</b> I am Dev</p>
-        <nav>
-          <a href="#about" className="header-link">About</a>
-          <a href="#projects" className="header-link">Projects</a>
-          <a href="#contact" className="header-link">Contact</a>
+        <nav className="navbar">
+          <a href="#About" className="header-link">About</a>
+          <a href="#Projects" className="header-link">Projects</a>
+          <a href="#Skills" className="header-link">Skills</a>
+          <a href="#Education" className="header-link">Education</a>
+          <a href="#Contact" className="header-link">Contact</a>
         </nav>
       </header>
+    <div className='main-container'>
+      <div class="intro">
+    <h1>HELLO,</h1>
+    <h2>I am Dev Raj</h2>
+     </div>
+     <div class="profile-pic">
+  <img src="dev.png" alt="Dev Raj"></img>
+</div>
+</div>
+    <div className="paragraph">
+      <p>I'm a BCA graduate with a passion for building things that live on the web. I enjoy turning ideas into reality using clean code and creative design.<br></br>
+I'm skilled in JavaScript, Git, HTML, CSS, and currently diving deep into React and full-stack development.</p>  
+      </div>
+
     </>
   );
 }
