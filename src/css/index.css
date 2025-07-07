@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-@import url('"https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 body {
   background-image: url('../paperBG.jpg');
@@ -10,21 +10,102 @@ body {
   padding: 0;
 }
 
-.main-container {
-  display: flex;
-  justify-content: space-between; /* pushes items apart */
-  align-items: center;
-  gap: 40px;
-  padding: 40px;
-}
 .header-container {
   padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-title {
   font-size: 2rem;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee1c9;
+  padding: 10px 0;
+  border: 3px ridge #7c6c5b;
+  outline: 2px dashed #b19c8a;
+  outline-offset: -5px;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #5a4e45;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #d2b991;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+}
+
+.intro {
+  padding: 60px 20px;
+  color: #bd937d;
+  font-family: 'Caveat', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 1px #5c3c30;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 16px 0 0;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 16px;
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.paragraph p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #100f0f;
+  margin: 16px 16px;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 0.5px #6B4E38;
+}
+
+/* Responsive Styles */
 @media (max-width: 900px) {
   .header-container {
     flex-direction: column;
@@ -34,104 +115,59 @@ body {
   .header-title {
     font-size: 1.5rem;
   }
+  .main-container {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+  }
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+  .intro h2 {
+    font-size: 1.3rem;
+  }
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+  .paragraph p {
+    margin: 12px 8px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
   .header-container {
-    flex-direction: column;
     padding: 1rem;
   }
   .header-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
-  nav {
+  .navbar {
     flex-direction: column;
     gap: 0.5rem;
+    padding: 8px 0;
   }
-}
-
-p {
-  color: black;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0.5rem 0;
-}
-
-
-
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #eee1c9;
-  padding: 3px 0;
-  border: 3px ridge #7c6c5b;
-  outline: 2px dashed #b19c8a;
-  outline-offset: -5px;
-  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; 
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #5a4e45;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 15px;
-  transition: all 0.3s ease;
-}
-
-.navbar a:hover {
-  background-color: #d2b991;
-  border-radius: 8px;
-}
-
-.intro {
-      padding: 100px 50px;
-      color: #bd937d;
-      font-family: 'Caveat Brush', cursive;
- text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
- -webkit-text-stroke: 1px #5c3c30;
-  text-stroke: 1px #5c3c30;
-
-    }
-
-    .intro h1 {
-      font-size: 5rem;
-      margin: 0;
-      font-weight: 700;
-    }
-
-    .intro h2 {
-      font-size: 3.5rem;
-      font-weight: 600;
-      margin: 20px 0 0;
-    }
-
-    /* profile pic golgol */
-
-    .profile-pic {
-  width: 300px;
-  height: 300px;
-  right: 10px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin: 20px;
-}
-
-.profile-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.paragraph p{
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #333;
-  
-  margin-left: 50px;
-  margin-right: 50px;
- font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; 
+  .main-container {
+    gap: 12px;
+    padding: 8px;
+  }
+  .intro {
+    padding: 32px 8px;
+  }
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+  .intro h2 {
+    font-size: 1rem;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin: 8px auto;
+  }
+  .paragraph p {
+    margin: 8px 4px;
+    font-size: 0.95rem;
+  }
 }

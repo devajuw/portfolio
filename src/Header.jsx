@@ -24,8 +24,8 @@ function Header() {
 </div>
 </div>
     <div className="paragraph">
-      <p>I'm a BCA graduate with a passion for building things that live on the web. I enjoy turning ideas into reality using clean code and creative design.<br></br>
-I'm skilled in JavaScript, Git, HTML, CSS, and currently diving deep into React and full-stack development.</p>  
+      <p>I'm a BCA graduate with a passion for building things that live on the web. I enjoy turning ideas into reality using clean code and creative design.<br></br><br />
+I'm skilled in Javascript, HTML, CSS and currently diving deep into React and full-stack development.</p>  
       </div>
 
     </>
