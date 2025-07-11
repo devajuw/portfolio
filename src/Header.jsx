@@ -1,20 +1,24 @@
 // Header.jsx
 import React from 'react';
-import './css/index.css'; 
+// import './css/index.css'; 
 
 function Header() {
   return (
     <>
       <header className="header-container">
         <nav className="navbar">
-          <a href="#About" className="header-link">About</a>
+          <a href="/" className="header-link">Home</a>
           <a href="#Projects" className="header-link">Projects</a>
           <a href="#Skills" className="header-link">Skills</a>
           <a href="#Education" className="header-link">Education</a>
           <a href="#Contact" className="header-link">Contact</a>
         </nav>
       </header>
+      {/* About me header */}
+      <div className='aboutme'><h1>About Me</h1></div>
+      {/* Main container */}
     <div className='main-container'>
+      {/* intro */}
       <div class="intro">
     <h1>HELLO,</h1>
     <h2>I am Dev Raj</h2>
