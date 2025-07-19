@@ -2,14 +2,17 @@
 @import url('"https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 body {
-  background-image: url("../paperBG.jpg");
+  background-image: url("../bg2.png");
   background-repeat: repeat;
   background-attachment: fixed;
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  cursor: url('cursor2.png'), auto;
 }
-
+a{
+  cursor: url('cursor2.png'), auto;
+}
 .main-container {
   display: flex;
   justify-content: space-between; /* pushes items apart */

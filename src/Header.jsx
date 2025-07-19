@@ -8,10 +8,10 @@ function Header() {
       <header className="header-container">
         <nav className="navbar">
           <a href="/" className="header-link">Home</a>
-          <a href="#Projects" className="header-link">Projects</a>
-          <a href="#Skills" className="header-link">Skills</a>
-          <a href="#Education" className="header-link">Education</a>
-          <a href="#Contact" className="header-link">Contact</a>
+          <a href="/Projects" className="header-link">Projects</a>
+          <a href="/Skills" className="header-link">Skills</a>
+          <a href="/Education" className="header-link">Education</a>
+          <a href="/Contact" className="header-link">Contact</a>
         </nav>
       </header>
       {/* About me header */}
