@@ -8,10 +8,10 @@ body {
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  cursor: url('cursor2.png'), auto;
+  cursor: url('/cursor2.png'), auto;
 }
 a{
-  cursor: url('cursor2.png'), auto;
+  cursor: url('/cursor2.png'), auto;
 }
 .main-container {
   display: flex;
@@ -37,6 +37,28 @@ a{
   .header-title {
     font-size: 1.5rem;
   }
+  
+
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+  }
+  
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+  
+  .intro h2 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -50,6 +72,38 @@ a{
   nav {
     flex-direction: column;
     gap: 0.5rem;
+  }
+  
+
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+  }
+  
+  .intro {
+    padding: 10px 20px;
+  }
+  
+  .paragraph p {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -91,12 +145,12 @@ p {
   font-size: rem;
 text-decoration: underline;
   border-radius: 10px;
- color: #181818;
+ color: #222020;
   font-family: "", cursive;
 }
 .intro {
   padding: 10px 50px;
-  color: #bd937d;
+  color: #a67152;
   font-family: "Caveat Brush", cursive;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   -webkit-text-stroke: 1px #5c3c30;
