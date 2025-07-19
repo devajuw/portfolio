@@ -7,8 +7,28 @@ function Contact() {
       <h2>Contact</h2>
       <ul>
         <li>Email: devvibe17@gmail.com</li>
-        <li>LinkedIn: linkedin.com/in/devajuw</li>
-        <li>GitHub: github.com/devajuw</li>
+        <li>
+          LinkedIn: 
+          <a 
+            href="https://linkedin.com/in/devajuw" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            linkedin.com/in/devajuw
+          </a>
+        </li>
+        <li>
+          GitHub: 
+          <a 
+            href="https://github.com/devajuw" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            github.com/devajuw
+          </a>
+        </li>
       </ul>
     </div>
     </>
