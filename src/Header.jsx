@@ -7,23 +7,23 @@ function Header() {
     <>
       <header className="header-container">
         <nav className="navbar">
-          <a href="/" className="header-link">Home</a>
-          <a href="/Projects" className="header-link">Projects</a>
-          <a href="/Skills" className="header-link">Skills</a>
-          <a href="/Education" className="header-link">Education</a>
-          <a href="/Contact" className="header-link">Contact</a>
+          <a href="#home" className="header-link">Home</a>
+          <a href="#projects" className="header-link">Projects</a>
+          <a href="#skills" className="header-link">Skills</a>
+          <a href="#education" className="header-link">Education</a>
+          <a href="#contact" className="header-link">Contact</a>
         </nav>
       </header>
       {/* About me header */}
       <div className='aboutme'><h1>About Me</h1></div>
       {/* Main container */}
-    <div className='main-container'>
+    <div className='main-container' id="home">
       {/* intro */}
-      <div class="intro">
+      <div className="intro">
     <h1>HELLO,</h1>
     <h2>I am Dev Raj</h2>
      </div>
-     <div class="profile-pic">
+     <div className="profile-pic">
   <img src="dev.png" alt="Dev Raj"></img>
 </div>
 </div>

@@ -10,111 +10,17 @@ body {
   padding: 0;
   cursor: url('/cursor2.png'), auto;
 }
-a{
+
+a {
   cursor: url('/cursor2.png'), auto;
-}
-.main-container {
-  display: flex;
-  justify-content: space-between; /* pushes items apart */
-  align-items: center;
-  gap: 40px;
-  padding: 40px;
-}
-.header-container {
-  padding: 2rem;
-}
-
-.header-title {
-  font-size: 2rem;
-}
-
-@media (max-width: 900px) {
-  .header-container {
-    flex-direction: column;
-    padding: 1.5rem;
-    text-align: center;
-  }
-  .header-title {
-    font-size: 1.5rem;
-  }
-  
-
-  .main-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .profile-pic {
-    width: 250px;
-    height: 250px;
-    margin: 10px auto;
-  }
-  
-  .intro h1 {
-    font-size: 3.5rem;
-  }
-  
-  .intro h2 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  .header-title {
-    font-size: 1.2rem;
-  }
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-
-  .main-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-    padding: 15px;
-  }
-  
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-    margin: 10px auto;
-  }
-  
-  .intro h1 {
-    font-size: 2.5rem;
-  }
-  
-  .intro h2 {
-    font-size: 2rem;
-  }
-  
-  .intro {
-    padding: 10px 20px;
-  }
-  
-  .paragraph p {
-    font-size: 1.2rem;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-p {
-  color: black;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0.5rem 0;
 }
 
 .navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -124,6 +30,8 @@ p {
   outline: 2px dashed #b19c8a;
   outline-offset: -5px;
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  width: fit-content;
+  min-width: 90%;
 }
 
 .navbar a {
@@ -142,12 +50,22 @@ p {
 
 .aboutme {
   text-align: center;
-  font-size: rem;
-text-decoration: underline;
+  font-size: 2rem;
+  text-decoration: underline;
   border-radius: 10px;
- color: #222020;
-  font-family: "", cursive;
+  color: #222020;
+  font-family: "Josefin Sans", cursive;
+  margin-top: 80px;
 }
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+}
+
 .intro {
   padding: 10px 50px;
   color: #a67152;
@@ -168,12 +86,9 @@ text-decoration: underline;
   margin: 20px 0 0;
 }
 
-/* profile pic golgol */
-
 .profile-pic {
   width: 300px;
   height: 300px;
-  right: 10px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -186,6 +101,7 @@ text-decoration: underline;
   object-fit: cover;
   display: block;
 }
+
 .paragraph p {
   font-size: 1.7rem;
   line-height: 1.6;
@@ -217,4 +133,76 @@ text-decoration: underline;
   padding: 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   flex: 1 1 250px;
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+  }
+  
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+  
+  .intro h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 10px 0;
+  }
+  
+  .navbar a {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+  
+  .aboutme {
+    margin-top: 120px;
+    font-size: 1.5rem;
+  }
+  
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+  }
+  
+  .intro {
+    padding: 10px 20px;
+  }
+  
+  .paragraph p {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

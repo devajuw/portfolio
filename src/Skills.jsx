@@ -3,7 +3,7 @@ import './css/index.css';
 function Skills() {
   return (
     <>
-    <div className="skills-container">
+    <div className="skills-container" id="skills">
       <h2>Skills</h2>
       <ul>
         <li>JavaScript (ES6+)</li>
