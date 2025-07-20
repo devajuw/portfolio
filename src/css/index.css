@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 
+body, a { cursor: url('/cursor2.png'), auto; }
 body {
   background-image: url("../bg2.png");
   background-repeat: repeat;
@@ -8,11 +9,6 @@ body {
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  cursor: url('/cursor2.png'), auto;
-}
-
-a {
-  cursor: url('/cursor2.png'), auto;
 }
 
 .navbar {
@@ -51,14 +47,23 @@ a {
   color: #fff;
 }
 
-.aboutme {
+.aboutme, .projects-container h2, .skills-container h2, .education-container h2, .contact-container h2 {
   text-align: center;
   font-size: 2.2rem;
   color: #6b4b33;
   font-family: "Josefin Sans", sans-serif;
-  margin-top: 80px;
   font-weight: 700;
   letter-spacing: 1.5px;
+}
+
+.aboutme { margin-top: 80px; }
+.projects-container h2, .skills-container h2, .education-container h2, .contact-container h2 { margin-bottom: 30px; }
+
+.projects-container, .skills-container, .education-container, .contact-container {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
 }
 
 .main-container {
@@ -77,17 +82,8 @@ a {
   -webkit-text-stroke: 1px #5c3c30;
 }
 
-.intro h1 {
-  font-size: 5rem;
-  margin: 0;
-  font-weight: 700;
-}
-
-.intro h2 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin: 20px 0 0;
-}
+.intro h1 { font-size: 5rem; margin: 0; font-weight: 700; }
+.intro h2 { font-size: 3.5rem; font-weight: 600; margin: 20px 0 0; }
 
 .profile-pic {
   width: 300px;
@@ -115,22 +111,6 @@ a {
   -webkit-text-stroke: 1px #6b4e38;
 }
 
-.projects-container {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 800px;
-}
-
-.projects-container h2 {
-  font-size: 2rem;
-  text-decoration: underline;
-  border-radius: 10px;
-  color: #222020;
-  font-family: "Josefin Sans", cursive;
-  margin-bottom: 30px;
-}
-
 .project-list {
   display: flex;
   flex-direction: column;
@@ -138,23 +118,50 @@ a {
   align-items: center;
 }
 
-.project-card {
+.project-card, .skills-container li, .education-container li, .contact-container li, .github-stats {
   background-color: #eee1c9;
   border: 3px ridge #7c6c5b;
   outline: 2px dashed #b19c8a;
   outline-offset: -5px;
-  padding: 20px;
   border-radius: 10px;
+}
+
+.project-card {
+  padding: 20px;
   max-width: 600px;
   width: 100%;
 }
 
-.project-card h3 {
+.skills-container li, .contact-container li {
+  padding: 15px 25px;
+  color: #5a4e45;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.education-container li {
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+.github-stats {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3, .github-stats h3 {
   color: #5a4e45;
   font-size: 1.8rem;
-  margin-bottom: 15px;
   font-weight: bold;
 }
+
+.project-card h3 { margin-bottom: 15px; }
+.github-stats h3 { margin-bottom: 20px; text-align: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
 
 .project-card p {
   color: #100f0f;
@@ -175,92 +182,29 @@ a {
   transition: all 0.3s ease;
 }
 
-.project-link:hover {
+.project-link:hover, .skills-container li:hover, .contact-container li:hover {
   background-color: #b19c8a;
   transform: translateY(-2px);
 }
 
-/* Skills Section */
-.skills-container {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 800px;
-}
-
-.skills-container h2 {
-  font-size: 2rem;
-  text-decoration: underline;
-  border-radius: 10px;
-  color: #222020;
-  font-family: "Josefin Sans", cursive;
-  margin-bottom: 30px;
-}
-
-.skills-container ul {
+.skills-container ul, .education-container ul, .contact-container ul {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.skills-container li {
-  background-color: #eee1c9;
-  border: 3px ridge #7c6c5b;
-  outline: 2px dashed #b19c8a;
-  outline-offset: -5px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  color: #5a4e45;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.skills-container li:hover {
-  background-color: #d2b991;
-  transform: translateY(-2px);
-}
-
-/* Education Section */
-.education-container {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 800px;
-}
-
-.education-container h2 {
-  font-size: 2rem;
-  text-decoration: underline;
-  border-radius: 10px;
-  color: #222020;
-  font-family: "Josefin Sans", cursive;
-  margin-bottom: 30px;
-}
-
-.education-container ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
   gap: 20px;
   align-items: center;
 }
 
-.education-container li {
-  background-color: #eee1c9;
-  border: 3px ridge #7c6c5b;
-  outline: 2px dashed #b19c8a;
-  outline-offset: -5px;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  width: 100%;
-  text-align: left;
+.skills-container ul {
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+.education-container ul, .contact-container ul {
+  flex-direction: column;
+}
+
+.contact-container ul { gap: 15px; }
 
 .education-container b {
   color: #5a4e45;
@@ -274,81 +218,19 @@ a {
   font-style: italic;
 }
 
-/* Contact Section */
-.contact-container {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 800px;
-}
-
-.contact-container h2 {
-  font-size: 2rem;
-  text-decoration: underline;
-  border-radius: 10px;
-  color: #222020;
-  font-family: "Josefin Sans", cursive;
-  margin-bottom: 30px;
-}
-
-.contact-container ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.contact-container li {
-  background-color: #eee1c9;
-  border: 3px ridge #7c6c5b;
-  outline: 2px dashed #b19c8a;
-  outline-offset: -5px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  color: #5a4e45;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.contact-container li:hover {
-  background-color: #d2b991;
-  transform: translateY(-2px);
-}
-
 .contact-link {
   color: #5a4e45;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  display: inline-block;
+  width: 100%;
+  color: inherit;
 }
 
 .contact-link:hover {
   color: #7c6c5b;
   text-decoration: underline;
-}
-
-/* GitHub Stats Section */
-.github-stats {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #eee1c9;
-  border: 3px ridge #7c6c5b;
-  outline: 2px dashed #b19c8a;
-  outline-offset: -5px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.github-stats h3 {
-  color: #5a4e45;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .github-widgets {
@@ -359,8 +241,7 @@ a {
   justify-content: center;
 }
 
-.github-streak,
-.github-stats-img {
+.github-streak, .github-stats-img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
@@ -368,154 +249,39 @@ a {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.github-streak:hover,
-.github-stats-img:hover {
+.github-streak:hover, .github-stats-img:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
-  .github-widgets {
-    flex-direction: row;
-    gap: 30px;
-  }
-  
-  .github-streak,
-  .github-stats-img {
-    max-width: 45%;
-  }
+  .github-widgets { flex-direction: row; gap: 30px; }
+  .github-streak, .github-stats-img { max-width: 45%; }
 }
 
 @media (max-width: 900px) {
-  .main-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .profile-pic {
-    width: 250px;
-    height: 250px;
-    margin: 10px auto;
-  }
-  
-  .intro h1 {
-    font-size: 3.5rem;
-  }
-  
-  .intro h2 {
-    font-size: 2.5rem;
-  }
+  .main-container { flex-direction: column; text-align: center; gap: 20px; padding: 20px; }
+  .profile-pic { width: 250px; height: 250px; margin: 10px auto; }
+  .intro h1 { font-size: 3.5rem; }
+  .intro h2 { font-size: 2.5rem; }
 }
 
 @media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 10px 0;
-  }
-  
-  .navbar a {
-    font-size: 1.2rem;
-    padding: 8px 12px;
-  }
-  
-  .aboutme {
-    margin-top: 120px;
-    font-size: 1.5rem;
-  }
-  
-  .main-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-    padding: 15px;
-  }
-  
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-    margin: 10px auto;
-  }
-  
-  .intro h1 {
-    font-size: 2.5rem;
-  }
-  
-  .intro h2 {
-    font-size: 2rem;
-  }
-  
-  .intro {
-    padding: 10px 20px;
-  }
-  
-  .paragraph p {
-    font-size: 1.2rem;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  
-  .projects-container {
-    padding: 15px;
-  }
-  
-  .projects-container h2 {
-    font-size: 1.5rem;
-  }
-  
-  .project-card {
-    padding: 15px;
-  }
-  
-  .project-card h3 {
-    font-size: 1.5rem;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-  }
-  
-  .skills-container {
-    padding: 15px;
-  }
-  
-  .skills-container h2 {
-    font-size: 1.5rem;
-  }
-  
-  .skills-container li {
-    font-size: 1rem;
-    padding: 12px 20px;
-  }
-  
-  .education-container {
-    padding: 15px;
-  }
-  
-  .education-container h2 {
-    font-size: 1.5rem;
-  }
-  
-  .education-container li {
-    padding: 15px;
-  }
-  
-  .education-container b {
-    font-size: 1.1rem;
-  }
-  
-  .contact-container {
-    padding: 15px;
-  }
-  
-  .contact-container h2 {
-    font-size: 1.5rem;
-  }
-  
-  .contact-container li {
-    font-size: 1rem;
-    padding: 12px 20px;
-  }
+  .navbar { flex-direction: column; gap: 0.5rem; padding: 10px 0; }
+  .navbar a { font-size: 1.2rem; padding: 8px 12px; }
+  .aboutme { margin-top: 120px; font-size: 1.5rem; }
+  .main-container { flex-direction: column; text-align: center; gap: 15px; padding: 15px; }
+  .profile-pic { width: 200px; height: 200px; margin: 10px auto; }
+  .intro h1 { font-size: 2.5rem; }
+  .intro h2 { font-size: 2rem; }
+  .intro { padding: 10px 20px; }
+  .paragraph p { font-size: 1.2rem; margin-left: 20px; margin-right: 20px; }
+  .projects-container, .skills-container, .education-container, .contact-container { padding: 15px; }
+  .projects-container h2, .skills-container h2, .education-container h2, .contact-container h2 { font-size: 1.5rem; }
+  .project-card { padding: 15px; }
+  .project-card h3 { font-size: 1.5rem; }
+  .project-card p { font-size: 1rem; }
+  .skills-container li, .contact-container li { font-size: 1rem; padding: 12px 20px; }
+  .education-container li { padding: 15px; }
+  .education-container b { font-size: 1.1rem; }
 }

@@ -12,8 +12,8 @@ function Skills() {
         <li>HTML5 & CSS3</li>
         <li>SQL</li>
         <li>Git & GitHub</li>
-        <li>Responsive Design</li>
-        <li>Problem Solving</li>
+        <li>Firebase</li>
+        <li>Python</li>
       </ul>
       
       <div className="github-stats">

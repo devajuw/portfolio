@@ -6,27 +6,32 @@ function Contact() {
     <div className="contact-container" id="contact">
       <h2>Contact</h2>
       <ul>
-        <li>Email: devvibe17@gmail.com</li>
         <li>
-          LinkedIn: 
+          <a
+            href="mailto:devvibe17@gmail.com"
+            className="contact-link"
+          >
+            Email: devvibe17@gmail.com
+          </a>
+        </li>
+        <li>
           <a 
             href="https://linkedin.com/in/devajuw" 
             target="_blank" 
             rel="noopener noreferrer"
             className="contact-link"
           >
-            linkedin.com/in/devajuw
+            LinkedIn: @devajuw
           </a>
         </li>
         <li>
-          GitHub: 
           <a 
             href="https://github.com/devajuw" 
             target="_blank" 
             rel="noopener noreferrer"
             className="contact-link"
           >
-            github.com/devajuw
+            GitHub: github.com/devajuw
           </a>
         </li>
       </ul>
