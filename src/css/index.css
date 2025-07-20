@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url('"https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 
 body {
   background-image: url("../bg2.png");
@@ -24,14 +24,16 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #eee1c9;
+  background: linear-gradient(135deg, rgba(183, 169, 143, 0.9) 0%, rgba(210, 185, 145, 0.8) 50%, rgba(177, 156, 118, 0.9) 100%);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 6px 15px;
-  border: 2px solid #5a4e45;
+  border: 2px solid rgba(90, 78, 69, 0.6);
   border-radius: 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   width: fit-content;
-  min-width: 90%;
+  min-width: 80%;
 }
 
 .navbar a {
@@ -44,18 +46,19 @@ a {
 }
 
 .navbar a:hover {
-  background-color: #d2b991;
+  background-color: #bfa77a;
   border-radius: 8px;
+  color: #fff;
 }
 
 .aboutme {
   text-align: center;
-  font-size: 2rem;
-  text-decoration: underline;
-  border-radius: 10px;
-  color: #222020;
-  font-family: "Josefin Sans", cursive;
+  font-size: 2.2rem;
+  color: #6b4b33;
+  font-family: "Josefin Sans", sans-serif;
   margin-top: 80px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
 .main-container {
@@ -325,6 +328,62 @@ a {
 .contact-link:hover {
   color: #7c6c5b;
   text-decoration: underline;
+}
+
+/* GitHub Stats Section */
+.github-stats {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #eee1c9;
+  border: 3px ridge #7c6c5b;
+  outline: 2px dashed #b19c8a;
+  outline-offset: -5px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.github-stats h3 {
+  color: #5a4e45;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.github-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-streak,
+.github-stats-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github-streak:hover,
+.github-stats-img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .github-widgets {
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .github-streak,
+  .github-stats-img {
+    max-width: 45%;
+  }
 }
 
 @media (max-width: 900px) {
