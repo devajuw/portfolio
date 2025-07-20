@@ -31,7 +31,7 @@ function Contact() {
             rel="noopener noreferrer"
             className="contact-link"
           >
-            GitHub: github.com/devajuw
+            GitHub: @devajuw
           </a>
         </li>
       </ul>

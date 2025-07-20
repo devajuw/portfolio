@@ -11,34 +11,79 @@ body {
   padding: 0;
 }
 
-.navbar {
+.header-container {
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+}
+
+.navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: linear-gradient(135deg, rgba(183, 169, 143, 0.9) 0%, rgba(210, 185, 145, 0.8) 50%, rgba(177, 156, 118, 0.9) 100%);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 6px 15px;
+  padding: 8px 20px;
   border: 2px solid rgba(90, 78, 69, 0.6);
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   width: fit-content;
-  min-width: 80%;
+  max-width: 600px;
+  min-width: auto;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(183, 169, 143, 0.9) 0%, rgba(210, 185, 145, 0.8) 50%, rgba(177, 156, 118, 0.9) 100%);
+  border: 2px solid rgba(90, 78, 69, 0.6);
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover {
+  background: linear-gradient(135deg, rgba(210, 185, 145, 0.9) 0%, rgba(183, 169, 143, 0.8) 50%, rgba(210, 185, 145, 0.9) 100%);
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #5a4e45;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .navbar a {
   text-decoration: none;
   color: #5a4e45;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 8px 12px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .navbar a:hover {
@@ -51,13 +96,15 @@ body {
   text-align: center;
   font-size: 2.2rem;
   color: #6b4b33;
-  font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   letter-spacing: 1.5px;
+  margin-bottom: 30px;
 }
 
-.aboutme { margin-top: 80px; }
-.projects-container h2, .skills-container h2, .education-container h2, .contact-container h2 { margin-bottom: 30px; }
+.aboutme { 
+  margin-top: 80px; 
+  margin-bottom: 0;
+}
 
 .projects-container, .skills-container, .education-container, .contact-container {
   text-align: center;
@@ -107,7 +154,6 @@ body {
   color: #100f0f;
   margin-left: 50px;
   margin-right: 50px;
-  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   -webkit-text-stroke: 1px #6b4e38;
 }
 
@@ -161,7 +207,11 @@ body {
 }
 
 .project-card h3 { margin-bottom: 15px; }
-.github-stats h3 { margin-bottom: 20px; text-align: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+.github-stats h3 { 
+  margin-bottom: 20px; 
+  text-align: center; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
 
 .project-card p {
   color: #100f0f;
@@ -219,7 +269,6 @@ body {
 }
 
 .contact-link {
-  color: #5a4e45;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -246,7 +295,7 @@ body {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .github-streak:hover, .github-stats-img:hover {
@@ -259,6 +308,18 @@ body {
   .github-streak, .github-stats-img { max-width: 45%; }
 }
 
+@media (min-width: 1200px) {
+  .navbar {
+    max-width: 500px;
+    padding: 6px 16px;
+  }
+  
+  .navbar a {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+  }
+}
+
 @media (max-width: 900px) {
   .main-container { flex-direction: column; text-align: center; gap: 20px; padding: 20px; }
   .profile-pic { width: 250px; height: 250px; margin: 10px auto; }
@@ -266,10 +327,41 @@ body {
   .intro h2 { font-size: 2.5rem; }
 }
 
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    max-width: 250px;
+  }
+  
+  .navbar.nav-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navbar a { 
+    font-size: 1.2rem; 
+    padding: 8px 12px; 
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 600px) {
-  .navbar { flex-direction: column; gap: 0.5rem; padding: 10px 0; }
-  .navbar a { font-size: 1.2rem; padding: 8px 12px; }
-  .aboutme { margin-top: 120px; font-size: 1.5rem; }
+  .aboutme { font-size: 1.5rem; }
   .main-container { flex-direction: column; text-align: center; gap: 15px; padding: 15px; }
   .profile-pic { width: 200px; height: 200px; margin: 10px auto; }
   .intro h1 { font-size: 2.5rem; }

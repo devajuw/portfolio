@@ -1,17 +1,35 @@
 // Header.jsx
-import React from 'react';
+import React, { useState } from 'react';
 // import './css/index.css'; 
 
 function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <>
       <header className="header-container">
-        <nav className="navbar">
-          <a href="#home" className="header-link">Home</a>
-          <a href="#projects" className="header-link">Projects</a>
-          <a href="#skills" className="header-link">Skills</a>
-          <a href="#education" className="header-link">Education</a>
-          <a href="#contact" className="header-link">Contact</a>
+        {/* Hamburger menu button for mobile */}
+        <button className="hamburger-menu" onClick={toggleNav}>
+          <span className={`hamburger-line ${isNavOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isNavOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isNavOpen ? 'open' : ''}`}></span>
+        </button>
+
+        {/* Navigation menu */}
+        <nav className={`navbar ${isNavOpen ? 'nav-open' : ''}`}>
+          <a href="#home" className="header-link" onClick={closeNav}>Home</a>
+          <a href="#projects" className="header-link" onClick={closeNav}>Projects</a>
+          <a href="#skills" className="header-link" onClick={closeNav}>Skills</a>
+          <a href="#education" className="header-link" onClick={closeNav}>Education</a>
+          <a href="#contact" className="header-link" onClick={closeNav}>Contact</a>
         </nav>
       </header>
       {/* About me header */}
