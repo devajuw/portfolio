@@ -10,9 +10,10 @@ function App() {
   // Initialize AOS
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Default animation duration
-      once: true, // Animation happens only once
-      offset: 100, // Trigger animations 100px before element comes into view
+      duration: 2000,
+      once: false, 
+      offset: 100, 
+      mirror: true,
     });
   }, []);
 

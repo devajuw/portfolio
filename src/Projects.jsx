@@ -4,7 +4,7 @@ function Projects() {
   return (
     <div data-aos="zoom-in-up">
     <div className="projects-container" id="projects">
-      <h2>Projects</h2>
+      <h2>Projects 🧭</h2>
       <div className="project-list">
         <div className="project-card">
           <h3>Urbon Spot🚘</h3>

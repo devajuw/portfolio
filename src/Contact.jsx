@@ -5,7 +5,7 @@ function Contact() {
     <>
      <div data-aos="flip-up">
         <div className="contact-container" id="contact">
-          <h2>Contact</h2>
+          <h2>Contact 📞</h2>
           <ul>
             <li>
               <a href="mailto:devvibe17@gmail.com" className="contact-link">

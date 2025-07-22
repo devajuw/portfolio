@@ -8,7 +8,7 @@ function Education() {
      data-aos-duration="2000">
 
     <div className="education-container" id="education">
-      <h2>Education</h2>
+      <h2>Education 🎓</h2>
       <ul>
         <li>
           <b>BCA</b> – Birla Institute Of Technology, Mesra<br />

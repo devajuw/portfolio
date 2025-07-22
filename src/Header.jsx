@@ -1,14 +1,9 @@
-// Header.jsx
 import React, { useState } from 'react';
-// import './css/index.css'; 
-
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
-
   const closeNav = () => {
     setIsNavOpen(false);
   };
@@ -32,23 +27,39 @@ function Header() {
           <a href="#contact" className="header-link" onClick={closeNav}>Contact</a>
         </nav>
       </header>
-      {/* About me header */}
-      <div className='aboutme'><h1>About Me</h1></div>
+      {/* About me */}
+      <div className='aboutme' data-aos="fade-down"
+     data-aos-anchor-placement="top-center"><h1><u>About Me</u></h1></div>
       {/* Main container */}
     <div className='main-container' id="home">
       {/* intro */}
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="top-center">
       <div className="intro">
     <h1>HELLO,</h1>
     <h2>I am Dev Raj</h2>
-     </div>
-     <div className="profile-pic">
+     </div></div>
+     {/* profile pic */}
+     <div 
+       className="profile-pic"
+       data-aos="fade-left"
+       data-aos-anchor-placement="top-center"
+     >
   <img src="dev.png" alt="Dev Raj"></img>
 </div>
+{/* parahraph intro */}
+
 </div>
-    <div className="paragraph">
-      <p>I'm a BCA graduate with a passion for building things that live on the web. I enjoy turning ideas into reality using clean code and creative design.<br></br><br />
-I'm skilled in Javascript, HTML, CSS and currently diving deep into React and full-stack development.</p>  
-      </div>
+<div 
+  className="paragraph"
+  data-aos="fade-right"
+  data-aos-duration="1500"
+>
+  <p>
+    I'm a BCA graduate with a passion for building things that live on the web. I enjoy turning ideas into reality using clean code and creative design.<br /><br />
+    I'm skilled in Javascript, HTML, CSS and currently diving deep into React and full-stack development.
+  </p>  
+</div>
 
     </>
   );

@@ -6,7 +6,7 @@ function Skills() {
     <>
     <div data-aos="flip-down">
     <div className="skills-container" id="skills">
-      <h2>Skills</h2>
+      <h2>Skills 💻</h2>
       <ul>
         <li>JavaScript (ES6+)</li>
         <li>React</li>
@@ -17,8 +17,9 @@ function Skills() {
         <li>Python</li>
       </ul>
       
-      <div className="github-stats">
-        <h3>GitHub Activity</h3>
+      <div className="github-stats"
+      data-aos="zoom-in-up">
+        <h3>GitHub Activity 🔥</h3>
         <div className="github-widgets">
           <img 
             src="https://github-readme-streak-stats.herokuapp.com/?user=devajuw&theme=default&hide_border=true&background=eee1c9&stroke=7c6c5b&ring=5a4e45&fire=5a4e45&currStreakNum=5a4e45&sideNums=5a4e45&currStreakLabel=5a4e45&sideLabels=5a4e45&dates=7c6c5b"
@@ -34,6 +35,7 @@ function Skills() {
         </div>
       </div>
     </div>
+    
     </>
   );
 }
