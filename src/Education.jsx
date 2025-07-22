@@ -3,6 +3,10 @@ import React from "react";
 function Education() {
   return (
     <>
+    <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+
     <div className="education-container" id="education">
       <h2>Education</h2>
       <ul>
@@ -19,7 +23,7 @@ function Education() {
           <span>2009 – 2019</span>
         </li>
       </ul>
-    </div>
+    </div></div>
     </>
   );
 }

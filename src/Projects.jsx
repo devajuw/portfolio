@@ -2,6 +2,7 @@ import React from "react";
 
 function Projects() {
   return (
+    <div data-aos="zoom-in-up">
     <div className="projects-container" id="projects">
       <h2>Projects</h2>
       <div className="project-list">
@@ -40,7 +41,7 @@ function Projects() {
           </a>
         </div>
       </div>
-    </div>
+    </div></div>
   );
 }
 

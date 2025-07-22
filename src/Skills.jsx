@@ -4,6 +4,7 @@ import './css/index.css';
 function Skills() {
   return (
     <>
+    <div data-aos="flip-down">
     <div className="skills-container" id="skills">
       <h2>Skills</h2>
       <ul>
@@ -29,6 +30,7 @@ function Skills() {
             alt="GitHub Stats"
             className="github-stats-img"
           />
+          </div>
         </div>
       </div>
     </div>
