@@ -15,6 +15,11 @@ body {
   margin: 0;
   padding: 0;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* ===== To Hide Scrollbar ===== */
 
 /* ===== HEADER & NAVIGATION ===== */
 .header-container {
@@ -108,6 +113,7 @@ body {
   letter-spacing: 1.5px;
   margin-bottom: 30px;
 }
+
 
 .aboutme {
   margin-top: 80px; 
