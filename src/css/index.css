@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 
 /* ===== GLOBAL STYLES ===== */
-body, a { cursor: url('/cursor2.png'), auto; }
+body, a { cursor: url('/cursor2.png') 5 32, auto; }
 body {
   background-image: url("../bg2.png");
   background-repeat: repeat;
