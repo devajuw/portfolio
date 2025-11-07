@@ -15,7 +15,7 @@ function Projects() {
             <br /> Tech: HTML, CSS, JavaScript, RazorPay, JS PDF, FireBase, Git
           </p>
           <a
-            href="https://urbonspot.netlify.app"
+            href="https://urbonspotweb.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="project-link"
