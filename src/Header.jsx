@@ -46,6 +46,7 @@ function Header() {
           </a>
         </nav>
       </header>
+      
       {/* About me */}
       <div
         className="aboutme"
@@ -85,7 +86,6 @@ function Header() {
           I'm skilled in Javascript, HTML, CSS and currently diving deep into
           React and full-stack development.
         </p>
-
       </div>
     </>
   );
