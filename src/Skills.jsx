@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './css/index.css';
 
 function Skills() {
+  const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.github.com/users/devajuw')
+      .then(res => res.json())
+      .then(data => setStats(data))
+      .catch(err => console.error("Error fetching GitHub stats:", err));
+  }, []);
+
   return (
     <>
     <div data-aos="flip-down">
@@ -17,23 +26,44 @@ function Skills() {
         <li>Python</li>
       </ul>
       
-      <div className="github-stats"
-      data-aos="zoom-in-up">
+      <div className="github-stats" data-aos="zoom-in-up">
         <h3>GitHub Activity 🔥</h3>
         <div className="github-widgets">
-          <img 
-            src="https://github-readme-streak-stats.herokuapp.com/?user=devajuw&theme=default&hide_border=true&background=eee1c9&stroke=7c6c5b&ring=5a4e45&fire=5a4e45&currStreakNum=5a4e45&sideNums=5a4e45&currStreakLabel=5a4e45&sideLabels=5a4e45&dates=7c6c5b"
-            alt="GitHub Streak Stats"
-            className="github-streak"
-          />
-          <img 
-            src="https://github-readme-stats.vercel.app/api?username=devajuw&show_icons=true&theme=default&hide_border=true&bg_color=eee1c9&text_color=5a4e45&icon_color=7c6c5b&title_color=5a4e45"
-            alt="GitHub Stats"
-            className="github-stats-img"
-          />
+          <div className="calendar-container">
+            <img 
+              src="https://ghchart.rshah.org/5a4e45/devajuw" 
+              alt="GitHub Contribution Calendar"
+              className="github-calendar-img"
+            />
+          </div>
+          
+          <div className="stats-wrapper">
+            {stats && (
+              <div className="stats-grid">
+                <div className="stat-item">
+                  <span className="stat-label">Repositories</span>
+                  <span className="stat-value">{stats.public_repos}</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-label">Followers</span>
+                  <span className="stat-value">{stats.followers}</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-label">Following</span>
+                  <span className="stat-value">{stats.following}</span>
+                </div>
+              </div>
+            )}
+            
+            <div className="github-link">
+              <a href="https://github.com/devajuw" target="_blank" rel="noopener noreferrer">
+                Visit GitHub Profile ➔
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
     
     </>
