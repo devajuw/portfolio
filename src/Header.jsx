@@ -29,9 +29,6 @@ function Header() {
           <a href="#skills" className="header-link" onClick={closeNav}>
             Skills
           </a>
-          <a href="#education" className="header-link" onClick={closeNav}>
-            Education
-          </a>
           <a href="#contact" className="header-link" onClick={closeNav}>
             Contact
           </a>
