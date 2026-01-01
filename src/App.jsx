@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./css/index.css";
 import Header from "./Header";
 import Projects from "./Projects";
