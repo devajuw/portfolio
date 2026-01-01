@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Spotify from "./Spotify";
 
 function App() {
   // Initialize AOS
@@ -23,6 +24,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
+      <Spotify />
       <Footer />
     </div>
   );

@@ -135,7 +135,8 @@ body {
 .projects-container h2,
 .skills-container h2,
 .education-container h2,
-.contact-container h2 {
+.contact-container h2,
+.spotify-container h2 {
   text-align: center;
   font-size: 2rem;
   color: #634636;
@@ -243,7 +244,8 @@ body {
 .projects-container,
 .skills-container,
 .education-container,
-.contact-container {
+.contact-container,
+.spotify-container {
   text-align: center;
   margin: 40px auto;
   padding: 20px;
@@ -380,6 +382,15 @@ body {
 .contact-link:hover {
   color: #7c6c5b;
   text-decoration: underline;
+}
+
+/* ===== SPOTIFY SECTION ===== */
+.spotify-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ===== GITHUB STATS SECTION ===== */
