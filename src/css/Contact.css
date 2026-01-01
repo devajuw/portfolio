@@ -1,0 +1,49 @@
+.contact-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-container li {
+  background-color: #eee1c9;
+  border: 3px ridge #7c6c5b;
+  outline: 2px dashed #b19c8a;
+  outline-offset: -5px;
+  border-radius: 10px;
+  padding: 15px 25px;
+  color: #5a4e45;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-container li:hover {
+  background-color: #b19c8a;
+  transform: translateY(-2px);
+}
+
+.contact-link {
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 100%;
+  color: inherit;
+}
+
+.contact-link:hover {
+  color: #7c6c5b;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .contact-container li {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}

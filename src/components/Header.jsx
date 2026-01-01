@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import devPic from "../assets/dev.png";
+import "../css/Header.css";
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const toggleNav = () => {
@@ -69,7 +71,7 @@ function Header() {
           data-aos="fade-left"
           data-aos-anchor-placement="top-center"
         >
-          <img src="dev.png" alt="Dev Raj"></img>
+          <img src={devPic} alt="Dev Raj"></img>
         </div>
         {/* parahraph intro */}
       </div>

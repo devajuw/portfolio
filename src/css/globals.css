@@ -1,0 +1,110 @@
+/* ===== IMPORTS ===== */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+
+/* ===== GLOBAL STYLES ===== */
+body,
+a {
+  cursor: url("../assets/cursor2.png") 5 32, auto;
+}
+
+body {
+  background-image: url("../assets/bg2.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #5a4e45 !important;
+}
+
+/* ===== SHARED TYPOGRAPHY & LAYOUT ===== */
+.aboutme,
+.projects-container h2,
+.skills-container h2,
+.education-container h2,
+.contact-container h2,
+.spotify-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #634636;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.paragraph p {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #100f0f;
+  margin-left: 50px;
+  margin-right: 50px;
+  -webkit-text-stroke: 1px #6b4e38;
+}
+
+.projects-container,
+.skills-container,
+.education-container,
+.contact-container,
+.spotify-container {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+}
+
+/* ===== RESUME BUTTON ===== */
+.resume-btn {
+  display: inline-block;
+  background-color: #5a4e45;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid #5a4e45;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-btn:hover {
+  background-color: transparent;
+  color: #5a4e45;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .aboutme {
+    font-size: 1.5rem;
+  }
+  .paragraph p {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .projects-container,
+  .skills-container,
+  .education-container,
+  .contact-container {
+    padding: 15px;
+  }
+  .projects-container h2,
+  .skills-container h2,
+  .education-container h2,
+  .contact-container h2 {
+    font-size: 1.5rem;
+  }
+}

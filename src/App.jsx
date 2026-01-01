@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./css/index.css";
-import Header from "./Header";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Contact from "./Contact";
-import Footer from "./Footer";
-import Spotify from "./Spotify";
+
+import Header from "./components/Header";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Spotify from "./components/Spotify";
 
 function App() {
   // Initialize AOS

@@ -1,0 +1,41 @@
+.education-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.education-container li {
+  background-color: #eee1c9;
+  border: 3px ridge #7c6c5b;
+  outline: 2px dashed #b19c8a;
+  outline-offset: -5px;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+.education-container b {
+  color: #5a4e45;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.education-container span {
+  color: #7c6c5b;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .education-container li {
+    padding: 15px;
+  }
+  .education-container b {
+    font-size: 1.1rem;
+  }
+}

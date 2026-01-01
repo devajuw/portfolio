@@ -1,0 +1,60 @@
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.project-card {
+  background-color: #eee1c9;
+  border: 3px ridge #7c6c5b;
+  outline: 2px dashed #b19c8a;
+  outline-offset: -5px;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.project-card h3 {
+  color: #5a4e45;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: #100f0f;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  -webkit-text-stroke: 0.5px #6b4e38;
+}
+
+.project-link {
+  display: inline-block;
+  background-color: #d2b991;
+  color: #5a4e45;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #b19c8a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    padding: 15px;
+  }
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+  .project-card p {
+    font-size: 1rem;
+  }
+}
