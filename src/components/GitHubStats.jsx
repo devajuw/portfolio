@@ -17,7 +17,7 @@ function GitHubStats() {
       });
   }, [username]);
 
-  const chartUrl = `https://ghchart.rshah.org/5a4e45/${username}`;
+  const chartUrl = `https://ghchart.rshah.org/5a4e45/${username}?v=${Date.now()}`;
 
 
   return (
@@ -40,7 +40,7 @@ function GitHubStats() {
 
         <div className="github-widgets">
           <img
-            src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=default&hide_border=true&background=eee1c9&stroke=7c6c5b&ring=5a4e45&fire=5a4e45&currStreakNum=5a4e45&sideNums=5a4e45&currStreakLabel=5a4e45&sideLabels=5a4e45&dates=7c6c5b`}
+            src={`https://streak-stats.demolab.com/?user=${username}&year=2026&theme=default&hide_border=true&background=eee1c9&stroke=7c6c5b&ring=5a4e45&fire=5a4e45&currStreakNum=5a4e45&sideNums=5a4e45&currStreakLabel=5a4e45&sideLabels=5a4e45&dates=7c6c5b`}
             alt="GitHub Streak Stats"
             className="github-streak"
             loading="lazy"
