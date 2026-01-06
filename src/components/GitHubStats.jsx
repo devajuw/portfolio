@@ -5,7 +5,6 @@ function GitHubStats() {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
   const username = "devajuw";
-  const currentYear = 2026;
 
   useEffect(() => {
     const fetchGitHubData = async () => {
@@ -22,14 +21,30 @@ function GitHubStats() {
         const prsRes = await fetch(`https://api.github.com/search/issues?q=author:${username}+type:pr+is:merged`);
         const prsData = prsRes.ok ? await prsRes.json() : { total_count: 0 };
 
+        // Fetch total commits via search API
+        const commitsRes = await fetch(`https://api.github.com/search/commits?q=author:${username}`, {
+          headers: { 'Accept': 'application/vnd.github.cloak-preview+json' }
+        });
+        const commitsData = commitsRes.ok ? await commitsRes.json() : { total_count: 0 };
+
         const totalStars = reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+        const totalForks = reposData.reduce((acc, repo) => acc + repo.forks_count, 0);
+
+        // Calculate days since account creation
+        const createdDate = new Date(userData.created_at);
+        const now = new Date();
+        const daysSinceCreation = Math.floor((now - createdDate) / (1000 * 60 * 60 * 24));
 
         setStats({
           publicRepos: userData.public_repos,
           followers: userData.followers,
           following: userData.following,
           totalStars,
+          totalForks,
           mergedPRs: prsData.total_count || 0,
+          totalCommits: commitsData.total_count || 0,
+          daysCoding: daysSinceCreation,
+          memberSince: createdDate.getFullYear(),
         });
       } catch (err) {
         console.error("Error fetching GitHub data:", err);
@@ -41,11 +56,8 @@ function GitHubStats() {
     fetchGitHubData();
   }, [username]);
 
-  // GitHub contribution chart - shows last 12 months
+  // GitHub contribution chart
   const contributionChartUrl = `https://ghchart.rshah.org/5a4e45/${username}`;
-  
-  // GitHub streak stats
-  const streakStatsUrl = `https://streak-stats.demolab.com/?user=${username}&theme=default&hide_border=true&background=eee1c9&stroke=7c6c5b&ring=5a4e45&fire=5a4e45&currStreakNum=5a4e45&sideNums=5a4e45&currStreakLabel=5a4e45&sideLabels=5a4e45&dates=7c6c5b`;
 
   if (loading) {
     return (
@@ -76,13 +88,25 @@ function GitHubStats() {
               </div>
             </div>
 
-            {/* Stats Cards */}
-            <div className="stats-cards">
-              <img 
-                src={streakStatsUrl} 
-                alt="GitHub Streak" 
-                className="stats-card-img"
-              />
+            {/* Custom Streak Card */}
+            <div className="streak-card">
+              <div className="streak-item">
+                <span className="streak-icon">🔥</span>
+                <span className="streak-value">{stats.totalCommits.toLocaleString()}</span>
+                <span className="streak-label">Total Commits</span>
+              </div>
+              <div className="streak-divider"></div>
+              <div className="streak-item">
+                <span className="streak-icon">📅</span>
+                <span className="streak-value">{stats.daysCoding.toLocaleString()}</span>
+                <span className="streak-label">Days on GitHub</span>
+              </div>
+              <div className="streak-divider"></div>
+              <div className="streak-item">
+                <span className="streak-icon">⭐</span>
+                <span className="streak-value">{stats.totalStars}</span>
+                <span className="streak-label">Stars Earned</span>
+              </div>
             </div>
 
             {/* Quick Stats Grid */}
@@ -92,8 +116,8 @@ function GitHubStats() {
                 <span className="stat-label">Repositories</span>
               </div>
               <div className="stat-item">
-                <span className="stat-value">{stats.totalStars}</span>
-                <span className="stat-label">Total Stars</span>
+                <span className="stat-value">{stats.totalForks}</span>
+                <span className="stat-label">Total Forks</span>
               </div>
               <div className="stat-item highlight">
                 <span className="stat-value">{stats.mergedPRs}</span>
