@@ -26,7 +26,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
-      <Spotify />
+      {/* <Spotify /> */}
       <Footer />
     </div>
   );
