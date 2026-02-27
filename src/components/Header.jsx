@@ -35,7 +35,7 @@ function Header() {
             Contact
           </a>
           <a
-            href="https://drive.google.com/file/d/1wxf0e_f9PJAg0mmc7Vi7xyLEa7KaMNRG/view?usp=sharing"
+            href="https://drive.google.com/file/d/1EmJ58kw-fBqNWJ-jOaCiis3X6ix_GEHK/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="header-link"
