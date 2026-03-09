@@ -7,8 +7,8 @@ function Skills() {
   return (
     <>
       <div data-aos="flip-down">
-        <div className="skills-container" id="skills">
-          <h2>Skills 💻</h2>
+        <div className="skills-container">
+          <h2 id="skills">Skills 💻</h2>
           <ul>
             <li>JavaScript (ES6+)</li>
             <li>React</li>

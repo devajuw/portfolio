@@ -63,6 +63,10 @@ body {
   max-width: 800px;
 }
 
+#skills {
+  scroll-margin-top: 110px;
+}
+
 /* ===== RESUME BUTTON ===== */
 .resume-btn {
   display: inline-block;

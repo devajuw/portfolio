@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "../css/GitHubStats.css";
 
 function GitHubStats() {
+  const currentYear = new Date().getFullYear();
   const [stats, setStats] = useState(null);
+  const [contributions, setContributions] = useState([]);
+  const [yearTotalContributions, setYearTotalContributions] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   const username = "devajuw";
 
   useEffect(() => {
@@ -27,6 +31,15 @@ function GitHubStats() {
         });
         const commitsData = commitsRes.ok ? await commitsRes.json() : { total_count: 0 };
 
+        // Fetch year-specific contributions so the chart always shows current-year data.
+        const contributionsRes = await fetch(
+          `https://github-contributions-api.jogruber.de/v4/${username}?y=${currentYear}`
+        );
+        if (!contributionsRes.ok) throw new Error("Failed to fetch contributions");
+        const contributionsData = await contributionsRes.json();
+        const contributionDays = contributionsData.contributions || [];
+        const contributionTotal = contributionsData.total?.[String(currentYear)] || 0;
+
         const totalStars = reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0);
         const totalForks = reposData.reduce((acc, repo) => acc + repo.forks_count, 0);
 
@@ -46,8 +59,11 @@ function GitHubStats() {
           daysCoding: daysSinceCreation,
           memberSince: createdDate.getFullYear(),
         });
+        setContributions(contributionDays);
+        setYearTotalContributions(contributionTotal);
       } catch (err) {
         console.error("Error fetching GitHub data:", err);
+        setError("Could not load GitHub stats right now. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -56,14 +72,48 @@ function GitHubStats() {
     fetchGitHubData();
   }, [username]);
 
-  // GitHub contribution chart
-  const contributionChartUrl = `https://ghchart.rshah.org/5a4e45/${username}`;
+  const getContributionClass = (level) => {
+    if (level <= 0) return "level-0";
+    if (level === 1) return "level-1";
+    if (level === 2) return "level-2";
+    if (level === 3) return "level-3";
+    return "level-4";
+  };
+
+  const monthlyContributionData = useMemo(() => {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const monthTotals = Array(12).fill(0);
+
+    contributions.forEach((day) => {
+      const monthIndex = new Date(day.date).getMonth();
+      monthTotals[monthIndex] += day.count;
+    });
+
+    const maxCount = Math.max(...monthTotals, 1);
+
+    return monthNames.map((month, index) => ({
+      month,
+      count: monthTotals[index],
+      intensity: Math.round((monthTotals[index] / maxCount) * 100),
+    }));
+  }, [contributions]);
 
   if (loading) {
     return (
       <div className="github-stats-component" data-aos="zoom-in-up">
         <div className="github-stats-container">
           <div className="loading-spinner">Loading GitHub stats...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="github-stats-component" data-aos="zoom-in-up">
+        <div className="github-stats-container">
+          <h3>GitHub Activity</h3>
+          <div className="loading-spinner">{error}</div>
         </div>
       </div>
     );
@@ -78,13 +128,31 @@ function GitHubStats() {
           <>
             {/* Contribution Chart */}
             <div className="contribution-section">
-              <h4 className="section-title">Contribution Activity</h4>
+              <h4 className="section-title">Contribution Activity ({currentYear})</h4>
               <div className="contribution-chart">
-                <img 
-                  src={contributionChartUrl} 
-                  alt="GitHub Contributions" 
-                  className="chart-img"
-                />
+                <div className="month-summary" aria-label={`Monthly contributions in ${currentYear}`}>
+                  {monthlyContributionData.map((item) => (
+                    <div key={item.month} className="month-item" title={`${item.month}: ${item.count} contributions`}>
+                      <span className="month-name">{item.month}</span>
+                      <span className="month-count">{item.count}</span>
+                      <div className="month-bar-track">
+                        <div className="month-bar-fill" style={{ width: `${item.intensity}%` }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="contribution-grid" aria-label={`GitHub contributions in ${currentYear}`}>
+                  {contributions.map((day) => (
+                    <div
+                      key={day.date}
+                      className={`contribution-cell ${getContributionClass(day.level)}`}
+                      title={`${day.date}: ${day.count} contribution${day.count === 1 ? "" : "s"}`}
+                    />
+                  ))}
+                </div>
+                <p className="contribution-total">
+                  {yearTotalContributions.toLocaleString()} contributions in {currentYear}
+                </p>
               </div>
             </div>
 
