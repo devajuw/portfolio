@@ -1,12 +1,14 @@
 import React from "react";
+import { motion as Motion } from "framer-motion";
 import '../css/globals.css';
 import '../css/Skills.css';
 import GitHubStats from "./GitHubStats";
+import { fadeUp, inViewMotionProps } from "../motion/animations";
 
 function Skills() {
   return (
     <>
-      <div data-aos="flip-down">
+      <Motion.div variants={fadeUp} {...inViewMotionProps}>
         <div className="skills-container">
           <h2 id="skills">Skills 💻</h2>
           <ul>
@@ -21,7 +23,7 @@ function Skills() {
           
           <GitHubStats />
         </div>
-      </div>
+      </Motion.div>
     </>
   );
 }

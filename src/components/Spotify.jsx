@@ -1,10 +1,12 @@
+import { motion as Motion } from "framer-motion";
 import "../css/Spotify.css";
+import { fadeUp, inViewMotionProps } from "../motion/animations";
 
 const Spotify = () => {
   const playlistId = "0r5PeQPNE6wqBRFMNDO83k";
 
   return (
-    <div data-aos="fade-up">
+    <Motion.div variants={fadeUp} {...inViewMotionProps}>
       <div className="spotify-container" id="spotify">
         <h2> Some Good songs 🎶 </h2>
         <div className="spotify-wrapper">
@@ -19,7 +21,7 @@ const Spotify = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Motion.div>
   );
 };
 

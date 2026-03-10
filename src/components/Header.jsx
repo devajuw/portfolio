@@ -1,6 +1,15 @@
 import React, { useState } from "react";
+import { motion as Motion } from "framer-motion";
 import devPic from "../assets/dev.png";
 import "../css/Header.css";
+import {
+  fadeDown,
+  fadeLeft,
+  fadeRight,
+  fadeUp,
+  inViewMotionProps,
+} from "../motion/animations";
+
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const toggleNav = () => {
@@ -45,37 +54,33 @@ function Header() {
           </a>
         </nav>
       </header>
-      
+
       {/* About me */}
-      <div
-        className="aboutme"
-        data-aos="fade-down"
-        data-aos-anchor-placement="top-center"
-      >
+      <Motion.div className="aboutme" variants={fadeDown} {...inViewMotionProps}>
         <h1>
           <u>About Me</u>
         </h1>
-      </div>
+      </Motion.div>
       {/* Main container */}
       <div className="main-container" id="home">
         {/* intro */}
-        <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+        <Motion.div variants={fadeUp} {...inViewMotionProps}>
           <div className="intro">
             <h1>HELLO,</h1>
             <h2>I am Dev Raj</h2>
           </div>
-        </div>
+        </Motion.div>
         {/* profile pic */}
-        <div
+        <Motion.div
           className="profile-pic"
-          data-aos="fade-left"
-          data-aos-anchor-placement="top-center"
+          variants={fadeLeft}
+          {...inViewMotionProps}
         >
           <img src={devPic} alt="Dev Raj"></img>
-        </div>
+        </Motion.div>
         {/* parahraph intro */}
       </div>
-      <div className="paragraph" data-aos="fade-right" data-aos-duration="1500">
+      <Motion.div className="paragraph" variants={fadeRight} {...inViewMotionProps}>
         <p>
           I'm a BCA graduate with a passion for building things that live on the
           web. I enjoy turning ideas into reality using clean code and creative
@@ -85,7 +90,7 @@ function Header() {
           I'm skilled in Javascript, HTML, CSS and currently diving deep into
           React and full-stack development.
         </p>
-      </div>
+      </Motion.div>
     </>
   );
 }

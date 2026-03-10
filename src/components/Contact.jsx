@@ -1,9 +1,12 @@
 import React from "react";
+import { motion as Motion } from "framer-motion";
 import "../css/Contact.css";
+import { flipUp, inViewMotionProps } from "../motion/animations";
+
 function Contact() {
   return (
     <>
-     <div data-aos="flip-up">
+      <Motion.div variants={flipUp} {...inViewMotionProps}>
         <div className="contact-container" id="contact">
           <h2>Contact 📞</h2>
           <ul>
@@ -34,7 +37,7 @@ function Contact() {
             </li>
           </ul>
         </div>
-      </div>
+      </Motion.div>
     </>
   );
 }

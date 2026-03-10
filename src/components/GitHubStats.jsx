@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { motion as Motion } from "framer-motion";
 import "../css/GitHubStats.css";
+import { sharedViewport } from "../motion/animations";
 
 function GitHubStats() {
   const currentYear = new Date().getFullYear();
@@ -9,6 +11,12 @@ function GitHubStats() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const username = "devajuw";
+  const fadeInProps = {
+    initial: { opacity: 0 },
+    whileInView: { opacity: 1 },
+    transition: { duration: 0.5, ease: "easeOut" },
+    viewport: sharedViewport,
+  };
 
   useEffect(() => {
     const fetchGitHubData = async () => {
@@ -70,7 +78,7 @@ function GitHubStats() {
     };
 
     fetchGitHubData();
-  }, [username]);
+  }, [username, currentYear]);
 
   const getContributionClass = (level) => {
     if (level <= 0) return "level-0";
@@ -100,27 +108,27 @@ function GitHubStats() {
 
   if (loading) {
     return (
-      <div className="github-stats-component" data-aos="zoom-in-up">
+      <Motion.div className="github-stats-component" {...fadeInProps}>
         <div className="github-stats-container">
           <div className="loading-spinner">Loading GitHub stats...</div>
         </div>
-      </div>
+      </Motion.div>
     );
   }
 
   if (error) {
     return (
-      <div className="github-stats-component" data-aos="zoom-in-up">
+      <Motion.div className="github-stats-component" {...fadeInProps}>
         <div className="github-stats-container">
           <h3>GitHub Activity</h3>
           <div className="loading-spinner">{error}</div>
         </div>
-      </div>
+      </Motion.div>
     );
   }
 
   return (
-    <div className="github-stats-component" data-aos="zoom-in-up">
+    <Motion.div className="github-stats-component" {...fadeInProps}>
       <div className="github-stats-container">
         <h3>GitHub Activity 🔥</h3>
 
@@ -213,7 +221,7 @@ function GitHubStats() {
           </>
         )}
       </div>
-    </div>
+    </Motion.div>
   );
 }
 
