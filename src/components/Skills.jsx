@@ -12,13 +12,19 @@ function Skills() {
         <div className="skills-container">
           <h2 id="skills">Skills 💻</h2>
           <ul>
-            <li>JavaScript (ES6+)</li>
+            <li>JavaScript</li>
             <li>React</li>
-            <li>HTML5 & CSS3</li>
+            <li>Tailwind</li>
             <li>SQL</li>
-            <li>Git & GitHub</li>
+            <li>Git -Version Control</li>
             <li>Firebase</li>
-            <li>Python</li>
+            <li>Framer Motion</li>
+            <li>MongoDB</li>
+            <li>NodeJS</li>
+            <li>PostMan</li>
+            <li>ExpressJS</li>
+            <li>AuthJS</li>
+            <li>Figma</li>
           </ul>
           
           <GitHubStats />
