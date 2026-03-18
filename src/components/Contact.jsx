@@ -27,12 +27,12 @@ function Contact() {
             </li>
             <li>
               <a
-                href="https://github.com/devajuw"
+                href="https://cal.com/devajuw/meet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-link"
               >
-                GitHub: @devajuw
+                Book a meeting meeting🤝
               </a>
             </li>
           </ul>
