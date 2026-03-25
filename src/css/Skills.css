@@ -3,7 +3,7 @@
   padding: 0;
   display: flex;
   gap: 20px;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -13,22 +13,100 @@
   border: 3px ridge #7c6c5b;
   outline: 2px dashed #b19c8a;
   outline-offset: -5px;
-  border-radius: 10px;
-  padding: 15px 25px;
+  border-radius: 12px;
+  padding: 18px 24px;
   color: #5a4e45;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 100px;
+  cursor: default;
 }
 
 .skills-container li:hover {
   background-color: #b19c8a;
-  transform: translateY(-2px);
 }
 
+/* ── Category sections ── */
+.skill-category {
+  margin-bottom: 36px;
+  width: 100%;
+}
+
+.skill-category-title {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #7c6c5b;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skill-category-title::before,
+.skill-category-title::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 2px;
+  background: linear-gradient(
+    to var(--dir, right),
+    transparent,
+    #b19c8a
+  );
+}
+
+.skill-category-title::before {
+  --dir: right;
+}
+
+.skill-category-title::after {
+  --dir: left;
+}
+
+/* ── Icon & name ── */
+.skill-icon {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.skills-container li:hover .skill-icon {
+  transform: scale(1.15);
+}
+
+.skill-name {
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ── Responsive ── */
 @media (max-width: 600px) {
   .skills-container li {
     font-size: 1rem;
-    padding: 12px 20px;
+    padding: 14px 18px;
+    min-width: 80px;
+  }
+
+  .skill-icon {
+    font-size: 1.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
+
+  .skill-category-title {
+    font-size: 1.1rem;
   }
 }
