@@ -25,20 +25,33 @@
 .contact-container li:hover {
   background-color: #b19c8a;
   transform: translateY(-2px);
+  
 }
 
 .contact-link {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   width: 100%;
   color: inherit;
 }
 
+.contact-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.contact-container li:hover .contact-icon {
+  transform: scale(1.2);
+}
+
 .contact-link:hover {
   color: #7c6c5b;
-  text-decoration: underline;
+  text-decoration: None;
 }
 
 @media (max-width: 600px) {

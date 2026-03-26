@@ -2,6 +2,8 @@ import React from "react";
 import { motion as Motion } from "framer-motion";
 import "../css/Contact.css";
 import { flipUp, inViewMotionProps } from "../motion/animations";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -12,7 +14,7 @@ function Contact() {
           <ul>
             <li>
               <a href="mailto:devvibe17@gmail.com" className="contact-link">
-                Email: devvibe17@gmail.com
+                <MdEmail className="contact-icon" /> devvibe17@gmail.com
               </a>
             </li>
             <li> 
@@ -22,7 +24,7 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="contact-link"
               >
-                LinkedIn: @devajuw
+                <FaLinkedin className="contact-icon" /> @devajuw
               </a>
             </li>
             <li>
