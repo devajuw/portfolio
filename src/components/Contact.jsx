@@ -3,7 +3,7 @@ import { motion as Motion } from "framer-motion";
 import "../css/Contact.css";
 import { flipUp, inViewMotionProps } from "../motion/animations";
 import { MdEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin,FaTwitter} from "react-icons/fa";
 
 function Contact() {
   return (
@@ -37,6 +37,18 @@ function Contact() {
                 Book a meeting meeting🤝
               </a>
             </li>
+            
+            <li>
+              <a
+                href="https://twitter.com/devajuw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link"
+              >
+                <FaTwitter className="contact-icon" /> @devajuw
+              </a>
+            </li>
+
           </ul>
         </div>
       </Motion.div>
