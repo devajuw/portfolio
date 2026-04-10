@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@fontsource/outfit": "^5.2.6",
     "@fontsource/roboto": "^5.2.6",
     "framer-motion": "^12.35.2",

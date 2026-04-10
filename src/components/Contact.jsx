@@ -29,17 +29,6 @@ function Contact() {
             </li>
             <li>
               <a
-                href="https://cal.com/devajuw/meet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-link"
-              >
-                Book a meeting meeting🤝
-              </a>
-            </li>
-            
-            <li>
-              <a
                 href="https://twitter.com/devajuw"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,0 +1,48 @@
+/* Body in globals.css is #5a4e45 — button sits a step darker for contrast */
+.cal-float-wrap {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.cal-float-btn {
+  appearance: none;
+  font-family: inherit;
+  background-color: #3a3028;
+  color: #eee1c9;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 2px solid #2a221c;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cal-float-btn:hover {
+  background-color: #453a32;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.cal-float-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .cal-float-wrap {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .cal-float-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
