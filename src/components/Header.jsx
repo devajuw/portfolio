@@ -87,8 +87,7 @@ function Header() {
           design.
           <br />
           <br />
-          I'm skilled in Javascript, HTML, CSS and currently diving deep into
-          React and full-stack development.
+          I'm skilled in building web apps and currently diving deep into full-stack development, also exploring Gen - AI.
         </p>
       </Motion.div>
     </>
