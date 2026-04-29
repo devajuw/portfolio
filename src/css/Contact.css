@@ -56,7 +56,24 @@
 
 
 @media (max-width: 600px) {
+  .contact-container ul {
+    gap: 12px;
+    padding: 0 10px;
+  }
+
   .contact-container li {
     font-size: 1rem;
-    padding: 12px 20px;
-  }}
+    padding: 12px 15px;
+    max-width: 100%;
+    width: calc(100% - 30px);
+  }
+
+  .contact-link {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .contact-icon {
+    font-size: 1.2rem;
+  }
+}
