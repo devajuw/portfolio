@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion as Motion } from "framer-motion";
-import devPic from "../assets/dev.png";
 import "../css/Header.css";
 import {
   fadeDown,
@@ -76,7 +75,7 @@ function Header() {
           variants={fadeLeft}
           {...inViewMotionProps}
         >
-          <img src={devPic} loading ="lazy" alt="Dev Raj"></img>
+          <img src= "https://res.cloudinary.com/dsbsytywf/image/upload/q_auto/f_auto/v1777446021/dev_vk4yq5.png" alt="Dev Raj"></img>
         </Motion.div>
         {/* parahraph intro */}
       </div>

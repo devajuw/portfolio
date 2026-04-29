@@ -3,13 +3,11 @@ import { motion as Motion } from "framer-motion";
 import "../css/Projects.css";
 import { inViewMotionProps, zoomInUp } from "../motion/animations";
 import { SiGithub } from "react-icons/si";
-import urbonSpotImg from "../assets/urbon-spot-preview.png";
-import tokyoTourismImg from "../assets/tokyo-tourism-preview.png";
 
 const projects = [
   {
     title: "Urbon Spot 🚘",
-    image: urbonSpotImg,
+    image: "https://res.cloudinary.com/dsbsytywf/image/upload/q_auto/f_auto/v1777446589/urbon-spot-preview_p94y3y.png",
     description:
       "Developed a comprehensive web application for renting/buying parking spots in your city.",
     tech: "HTML, CSS, JavaScript, RazorPay, JS PDF, FireBase, Git",
@@ -18,7 +16,7 @@ const projects = [
   },
   {
     title: "Tokyo Tourism 🗼",
-    image: tokyoTourismImg,
+    image: "https://res.cloudinary.com/dsbsytywf/image/upload/q_auto/f_auto/v1777446607/tokyo-tourism-preview_fty7pd.png",
     description:
       "Built a frontend web application for Tokyo city tourism featuring a user-friendly interface with four key pages: Home introduction, Gallery showcase, Hotel booking form, and Heritage page with 11 historic sites.",
     tech: "HTML, CSS, JavaScript, Git",
