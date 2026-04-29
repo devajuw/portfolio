@@ -44,7 +44,7 @@ function Header() {
             Contact
           </a>
           <a
-            href="https://drive.google.com/file/d/1EmJ58kw-fBqNWJ-jOaCiis3X6ix_GEHK/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1TKPhpbRe3RiGH5nOf6js6TYnuFrIXDhk/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="header-link"
@@ -76,7 +76,7 @@ function Header() {
           variants={fadeLeft}
           {...inViewMotionProps}
         >
-          <img src={devPic} alt="Dev Raj"></img>
+          <img src={devPic} loading ="lazy" alt="Dev Raj"></img>
         </Motion.div>
         {/* parahraph intro */}
       </div>
