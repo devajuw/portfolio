@@ -16,6 +16,7 @@
     rgba(210, 185, 145, 0.8) 50%,
     rgba(177, 156, 118, 0.9) 100%
   );
+  
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
   padding: 8px 20px;
@@ -119,10 +120,10 @@
   transform: perspective(1000px);
 }
 
-.intro:hover {
+/*.intro:hover {
   transform: perspective(1000px) rotateX(3deg) rotateY(2deg);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 12px 35px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 .intro h1 {
   font-size: 5rem;
