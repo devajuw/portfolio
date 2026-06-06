@@ -27,7 +27,7 @@ function Contact() {
                 <FaLinkedin className="contact-icon" /> @devajuw
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://twitter.com/devajuw"
                 target="_blank"
@@ -36,7 +36,7 @@ function Contact() {
               >
                 <FaTwitter className="contact-icon" /> @devajuw
               </a>
-            </li>
+            </li>*/}
 
           </ul>
         </div>
