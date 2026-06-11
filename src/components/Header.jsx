@@ -81,12 +81,10 @@ function Header() {
       </div>
       <Motion.div className="paragraph" variants={fadeRight} {...inViewMotionProps}>
         <p>
-          I'm a BCA graduate with a passion for building things that live on the
-          web. I enjoy turning ideas into reality using clean code and creative
-          design.
-          <br />
-          <br />
-          I'm skilled in building web apps and currently diving deep into full-stack development, also exploring Gen - AI.
+          I work at Tata Consultancy Services as a Graduate Trainee - with a passion for building things that live on the
+          Internet.
+          <br></br>
+          I'm skilled in building web apps and currently diving deep into full-stack development & Gen - AI.
         </p>
       </Motion.div>
     </>
